@@ -24,6 +24,9 @@ Also with nowadays AI assistance Edge is able to read the open tab to help you s
 
 ## Installation
 
+- **Quick installation**: Go to the **Releases** section .
+- **Manual installation** Follow the steps listed below.
+
 ### Requirements
 
 - Python 3.7 or later
