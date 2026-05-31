@@ -243,9 +243,13 @@ class PdfmApp(tk.Tk):
 
     def __init__(self, pdf_path: str):
         super().__init__()
+        try:
+            self.iconbitmap("logo.ico")
+        except Exception:
+            pass
         self.pdf_path = pdf_path
         self.window_x = "460"
-        self.window_y = "580"
+        self.window_y = "600"
         self.title("pdfm")
         self.window_size = f"{self.window_x}x{self.window_y}"
         self.geometry(self.window_size)

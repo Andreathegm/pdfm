@@ -1,4 +1,7 @@
-old_reg/
+#logo 
+logo.ico
+
+
 # Python
 __pycache__/
 *.pyc
@@ -12,6 +15,9 @@ env/
 
 # bat scripts
 *.bat
+
+# releases
+releases/*
 
 # PyInstaller build artifacts
 dist/
