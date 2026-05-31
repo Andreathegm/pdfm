@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; Open pdfm GUI directly 
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\pdfm]
+@="pdfm"
+"Icon"="C:\\Users\\HP\\anaconda3\\envs\\pdfm\\python.exe,0"
+
+[HKEY_CLASSES_ROOT\SystemFileAssociations\.pdf\shell\pdfm\command]
+@="\"C:\\Users\\HP\\anaconda3\\envs\\pdfm\\pythonw.exe\" \"C:\\Users\\HP\\dev\\python\\pdfm\\pdfm_gui.py\" \"%1\""

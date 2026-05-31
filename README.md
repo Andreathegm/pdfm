@@ -21,49 +21,6 @@ Also with nowadays AI assistance Edge is able to read the open tab to help you s
 - High-DPI aware interface
 - Lightweight and fast
 
-## How It Works
-
-PDFM allows you to:
-
-1. Open a PDF directly from Windows File Explorer
-2. Choose the page before which a blank page should be inserted
-3. Save the modified document
-4. Continue reading and annotating the PDF in **Edge** (the final PDF will be available normally so it can be viewed by other browser/visualizer later)
-
-The inserted page is added before the specified page while preserving the rest of the document unchanged.
-
-## Graphical Interface
-
-### Usage
-
-1. Right-click a PDF file in Windows File Explorer
-2. Select **Open with PDFM** (if context menu integration is installed)
-3. In the application window:
-   - View the total number of pages
-   - Enter the page number before which the blank page should be inserted
-   - Click **Add Blank Page**
-4. The PDF is saved automatically
-5. Click **Open in Edge** to review the result
-
-## Command-Line Usage
-
-### Count Pages
-
-```bash
-python pdfm.py count document.pdf
-```
-
-### Insert a Blank Page
-
-```bash
-python pdfm.py add_blank_page document.pdf 3
-```
-
-### Specify an Output File
-
-```bash
-python pdfm.py add_blank_page document.pdf 3 --output modified_document.pdf
-```
 
 ## Installation
 
@@ -93,14 +50,6 @@ Main dependencies:
 - `pypdf` — PDF reading and modification
 - `reportlab` — blank page generation
 
-### Optional: Windows Context Menu Integration
-
-```bash
-python install_menu.py
-```
-
-This adds the **Open with PDFM** entry to the context menu for PDF files.
-
 ## Project Structure
 
 ```text
@@ -109,6 +58,51 @@ pdfm
     ├── pdfm_gui.py          # Tkinter graphical interface
     ├── requirements.txt     # Project dependencies
     └──install_menu_v5.reg  # Windows registry integration
+```
+
+### Optional: Windows Context Menu Integration
+
+Just double-click on **install_menu_v5.reg**.
+This adds the **Open with PDFM** entry to the context menu for PDF files.
+
+## Graphical Interface
+
+### Usage
+If context menu integration is installed : 
+1. Right-click a PDF file in Windows File Explorer
+2. Select **Open with PDFM**(if it doesn't appear right after you have to click 'more option')
+3. In the application window:
+   - View the total number of pages
+   - Enter the page number before which the blank page should be inserted
+   - Click **Add Blank Page**
+4. The PDF is saved automatically
+5. Click **Open in Edge** to review the result
+
+Alternatively you can run : 
+
+```bash
+python pdfm_gui.py
+```
+and then browse your pdf. The GUI will appear and work like above.
+
+## Command-Line Usage
+
+### Count Pages
+
+```bash
+python pdfm.py count document.pdf
+```
+
+### Insert a Blank Page
+
+```bash
+python pdfm.py add_blank_page document.pdf 3
+```
+
+### Specify an Output File
+
+```bash
+python pdfm.py add_blank_page document.pdf 3 --output modified_document.pdf
 ```
 
 ## Examples
