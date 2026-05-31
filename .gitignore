@@ -1,0 +1,27 @@
+old_reg/
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+pdfm-env/
+.venv/
+env/
+
+# bat scripts
+*.bat
+
+# PyInstaller build artifacts
+dist/
+build/
+*.spec
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
